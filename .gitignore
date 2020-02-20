@@ -30,5 +30,6 @@ build/
 ### VS Code ###
 .vscode/
 
-### Apache Derby log ###
+### Apache Derby ###
 derby.log
+mydb/
