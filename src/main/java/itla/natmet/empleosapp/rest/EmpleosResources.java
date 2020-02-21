@@ -4,6 +4,7 @@ import itla.natmet.empleosapp.domain.Empleo;
 import itla.natmet.empleosapp.repository.EmpleosRepository;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.data.domain.Page;
@@ -11,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "*",maxAge= 1800L)
 @RestController
 @RequestMapping("/api")
 public class EmpleosResources {
@@ -43,6 +46,7 @@ public class EmpleosResources {
         if (empleo.getId() != null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
+        empleo.setFechaPublicado(LocalDateTime.now());
         Empleo result = empleosRepository.save(empleo);
         return ResponseEntity.created(new URI("/api/empleos" + result.getId())).body(result);
     }
@@ -68,4 +72,7 @@ public class EmpleosResources {
         return ResponseEntity.ok().body(result);
     }
     
+    // TODO Agregar a empleo todas las propiedades que lleva
+    // para fecha localdatetime.
+    //ver si puedo ponerle seguridad
 }

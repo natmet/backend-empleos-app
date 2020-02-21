@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Wed Feb 19 10:41:18 AST 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0170-5de5-5d3a-000002d73588 
-on database directory memory:/Users/natmet/ITLA/Programacion II/aplicacion backend/empleos-app/testdb with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
+Thu Feb 20 20:56:42 AST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0170-653f-23f9-0000056fd6d0 
+on database directory /Users/natmet/ITLA/Programacion II/backend/empleos-app/mydb with class loader sun.misc.Launcher$AppClassLoader@2a139a55 
 Loaded from file:/Users/natmet/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_231-b11
-user.dir=/Users/natmet/ITLA/Programacion II/aplicacion backend/empleos-app
+user.dir=/Users/natmet/ITLA/Programacion II/backend/empleos-app
 os.name=Mac OS X
 os.arch=x86_64
 os.version=10.14.6
